@@ -194,6 +194,15 @@
 			<version>1.0.6</version>
 		</dependency>
 		<!-- Tiles 관련 디펜던시 끝 -->
+
+		<!-- https://mvnrepository.com/artifact/it.ozimov/embedded-redis -->
+		<dependency>
+			<groupId>it.ozimov</groupId>
+			<artifactId>embedded-redis</artifactId>
+			<version>0.7.2</version>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>
