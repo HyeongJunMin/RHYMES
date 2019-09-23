@@ -195,12 +195,16 @@
 		</dependency>
 		<!-- Tiles 관련 디펜던시 끝 -->
 
-		<!-- https://mvnrepository.com/artifact/it.ozimov/embedded-redis -->
+		<!-- 내장 Redis https://mvnrepository.com/artifact/it.ozimov/embedded-redis -->
 		<dependency>
 			<groupId>it.ozimov</groupId>
 			<artifactId>embedded-redis</artifactId>
 			<version>0.7.2</version>
-			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-redis -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>
 
 	</dependencies>

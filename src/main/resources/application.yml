@@ -22,3 +22,8 @@ spring:
       driver-class-name: com.mysql.cj.jdbc.Driver
       username: mhj
       password: mhj
+#  redis:
+#    host: localhost
+#    port: 6379
+#  profiles:
+#    active: local
