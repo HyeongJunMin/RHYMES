@@ -8,5 +8,5 @@ public class CommonController {
 	@RequestMapping(value = "/welcome")
 	public String welcome() {
 		return "welcome";
-	}
+	}	
 }

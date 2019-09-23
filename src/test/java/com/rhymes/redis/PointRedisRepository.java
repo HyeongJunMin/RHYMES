@@ -1,4 +1,4 @@
-package com.rhymes.test.redis;
+package com.rhymes.redis;
 
 import org.springframework.data.repository.CrudRepository;
 
