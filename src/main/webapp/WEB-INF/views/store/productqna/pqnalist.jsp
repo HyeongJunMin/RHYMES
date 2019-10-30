@@ -57,7 +57,7 @@
 		<c:forEach var="pqna" items="${pqnalist }" varStatus="vs">
 		<tr class="_hover_tr">
 			<td>${vs.count }</td>
-			<td style="text-align: left;" onclick="pqnadetail(${pqna.seq},${pqna.secret})">
+			<td style="text-align: left;" onclick="pqnadetail(${pqna.seq},${pqna.secret},'${pqna.id}','${loginid }')">
 			
 			<!-- 비밀글 이미지-->
 			<jsp:setProperty property="secret" name="spqna" value="${pqna.secret }"/>
@@ -98,7 +98,7 @@
 		<th colspan="4" align="center">
 		<!-- 페이징 -->
 		<div id="paging_wrap"> 
-			<jsp:include page="/WEB-INF/views/store/productqna/product_paging.jsp" flush="false">
+			<jsp:include page="/WEB-INF/views/store/productqna/qna_paging.jsp" flush="false">
 				<jsp:param name="pageNumber" value="${pageNumber }"/>
 				<jsp:param name="totalRecordCount" value="${totalRecordCount }"/>
 				<jsp:param name="pageCountPerScreen" value="${pageCountPerScreen }"/>
@@ -106,6 +106,7 @@
 			</jsp:include>
 			
 		<!-- hidden 을 통해서 값을 넘겨주기 -->
+		<input type="hidden" name="">
 		<input type="hidden" name="pageNumber" id="_pageNumber" value="0"> 
 		<input type="hidden" name="recordCountPerPage" id="_recordCountPerPage" value="${(empty recordCountPerPage)?0:recordCountPerPage }">	
 		</div>
@@ -126,7 +127,7 @@
 /* 클릭시 내용보이기 */
 $(".detail").hide();
 
-function pqnadetail(seq,secret){
+function pqnadetail(seq,secret,id,loginid){
 	if(secret==0){
 	if($("#detail"+seq).css("display")=="none"){
 		$(".detail").hide();
@@ -135,8 +136,19 @@ function pqnadetail(seq,secret){
 	}else{
 		$("#detail"+seq).hide();
 	}
-	}else if(secret==1){
-		alert("비밀글 입니다.");
+	}else if(secret==1){  /* 비밀글 인경우 */
+		if(id==loginid){  /* 로그인 아이디 = 글쓴이 */
+			if($("#detail"+seq).css("display")=="none"){
+				$(".detail").hide();
+				$("#detail"+seq).show();
+			
+			}else{
+				$("#detail"+seq).hide();
+			}
+			}else{
+				alert("비밀글 입니다.");
+						}
+		
 	}
 }
 /* 버튼 */
@@ -153,15 +165,18 @@ function PqnaWrite( p_seq ) {
 	location.href = "/productqna/pqnawrite?p_seq="+p_seq;
 }
 
-/* $("#_btnWrite").click(function () {  
+/* 
+$("#_btnWrite").click(function () {  
 	location.href = "/productqna/pqnawrite";
-}); */
+}); 
+*/
 
+/*
 function goPage(pageNumber) {
 	
 	$("#_pageNumber").val(pageNumber);  // 들어오는 값을 가져옴 
 	$("#_frmFormSearch").attr("action", "/productqna/pqnalist").submit(); //
 	
 }
-
+*/
 </script>  
