@@ -235,7 +235,7 @@ public class myUsedController {
 		List<ProductsDto> plist = MyusedService.getMyUsedList(mparam);
 		model.addAttribute("plist", plist);
 		model.addAttribute("select", mparam.getSelect());
-
+		System.out.println(plist.toString());
 		model.addAttribute("keyword", mparam.getKeyword());
 
 		model.addAttribute("pageNumber", sn); // 현재 페이지 넘버
