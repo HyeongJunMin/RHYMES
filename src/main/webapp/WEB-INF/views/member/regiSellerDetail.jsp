@@ -445,7 +445,7 @@ function checkIt() {
 				<input type="button" id="_emailNumBtn" value="인증번호 확인" class="regibutton"/>
 							<input type="hidden" id="_hiddenCode" name="hiddenCode" placeholder="확인용">
 							<input type="hidden" id="_checkCode" name="checkCode" placeholder="이메일 인증했는지 체크">
-				<p id="emailNumText" class="txt txt2"></p>
+				<p id="emailNumText" class="txt txt4"></p>
 			</td>
 		</tr>
 		<tr>

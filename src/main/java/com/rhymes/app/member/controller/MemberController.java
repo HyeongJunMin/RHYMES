@@ -361,9 +361,9 @@ public class MemberController {
 
 		if (b) {
 			model.addAttribute("userid", sbean.getUserid());
-			return "rhyfindpw";
-		} else {
 			return "rhypwreset";
+		} else {
+			return "rhyfindpw";	
 		}
 
 	}
