@@ -24,17 +24,21 @@ $(function(){
 	$("#btnSubmit").click(function(){
 		$.ajax({
 			type : 'get',
-			url : "/admin/mypage/points/getmembers",
+			url : "http://192.168.0.10:9091/common/idCheck.do",
 			dataType : "json",
 			data : {
-				value : $("#_coup_reg_id").val()
+				id : $("#smsid").val()
 			},
 			async: true,
 			success : function(data) {
-				console.log('load ok ');
-				$.each(data, function(index, item) {
-					dataArr.push( {id: "userid" + index , name: item } );
-				});
+				console.log('load ok ' + data );
+				if( 'true' === data.trim ){
+					//리턴이 true이면 없는 아이디
+					console.log('존재하지 않는 아이디. : ' + data);
+				}else{
+					//리턴이 false이면 존재하는 아이디
+					console.log('존재하는 아이디. : ' + data);
+				}
 			},
 			error : function(err) {
 				console.log('connect eror');

@@ -25,14 +25,11 @@ public class QueryExecuteTest {
 	
 	@Test
 	public void dd() {
-		int d = ss.selectOne("coupon.getCountOnConditions", "mhj");
-		System.out.println(d);
+		//int d = ss.selectOne("coupon.getCountOnConditions", "mhj");
+		//System.out.println(d);
 		
-		int dd = mypageCouponService.getCountOnConditions("mhj");
-		System.out.println(dd);
-		
-		
-		
+//		int dd = mypageCouponService.getCountOnConditions("mhj");
+//		System.out.println(dd);
 		
 	}
 }

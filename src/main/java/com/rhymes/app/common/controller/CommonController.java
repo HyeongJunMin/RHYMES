@@ -33,6 +33,11 @@ public class CommonController {
 		
 		return "welcome";
 	}
+	
+	@RequestMapping(value = "/welcometest")
+	public String welcomeTest() {
+		return "welcometest";
+	}
 
 	@RequestMapping("/welcome/main")
 	public String welcomeMain() {

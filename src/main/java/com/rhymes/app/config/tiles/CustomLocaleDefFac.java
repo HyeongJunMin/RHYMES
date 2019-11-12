@@ -7,6 +7,10 @@ import org.apache.tiles.definition.LocaleDefinitionsFactory;
 import org.apache.tiles.definition.NoSuchDefinitionException;
 import org.apache.tiles.request.Request;
 
+/**tiles 설정에 지역을 알려주기 위한 파일
+ * @author minhj
+ *
+ */
 public class CustomLocaleDefFac extends LocaleDefinitionsFactory {
 
 	/** {@inheritDoc} */

@@ -34,7 +34,7 @@
 	</tr>
 	<tr align="center" style="margin: auto;">
 		<td colspan="2" align="center" style="margin: auto;">
-			<form class="form-row">
+			<div class="form-row">
 				<div class="col"></div><div class="col"></div>
 				<div class="col">				
 					<input type="text" class="form-control" id="smsid" placeholder="SMS 아이디 입력">
@@ -44,7 +44,7 @@
 					<!-- <button class="btn btn-primary mb-2" disabled id="btnSubmit">아이디 확인</button> -->
 				</div>
 				<div class="col"></div><div class="col"></div>
-			</form>
+			</div>
 		</td>
 	</tr>	
 		
